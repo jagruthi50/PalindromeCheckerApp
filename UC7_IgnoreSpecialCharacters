@@ -1,0 +1,17 @@
+package com.mycompany.palindromecheckerapp;
+
+public class UC7_IgnoreSpecialCharacters {
+
+    public static void main(String[] args) {
+
+        String input = "Madam, I'm Adam";
+        input = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        String reversed = new StringBuilder(input).reverse().toString();
+
+        if (input.equals(reversed))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
