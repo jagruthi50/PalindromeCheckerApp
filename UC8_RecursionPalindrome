@@ -1,0 +1,22 @@
+package com.mycompany.palindromecheckerapp;
+
+public class UC8_RecursionPalindrome {
+
+    static boolean check(String str, int left, int right) {
+        if (left >= right)
+            return true;
+        if (str.charAt(left) != str.charAt(right))
+            return false;
+        return check(str, left + 1, right - 1);
+    }
+
+    public static void main(String[] args) {
+
+        String input = "racecar";
+
+        if (check(input, 0, input.length() - 1))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
