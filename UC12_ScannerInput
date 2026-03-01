@@ -1,0 +1,22 @@
+package com.mycompany.palindromecheckerapp;
+
+import java.util.Scanner;
+
+public class UC12_ScannerInput {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String input = sc.nextLine();
+
+        String reversed = new StringBuilder(input).reverse().toString();
+
+        if (input.equalsIgnoreCase(reversed))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+
+        sc.close();
+    }
+}
