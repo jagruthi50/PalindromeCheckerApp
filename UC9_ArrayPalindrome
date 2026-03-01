@@ -1,0 +1,23 @@
+package com.mycompany.palindromecheckerapp;
+
+public class UC9_ArrayPalindrome {
+
+    public static void main(String[] args) {
+
+        String input = "level";
+        char[] arr = input.toCharArray();
+        boolean isPalindrome = true;
+
+        for (int i = 0; i < arr.length / 2; i++) {
+            if (arr[i] != arr[arr.length - 1 - i]) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
