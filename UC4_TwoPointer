@@ -1,0 +1,18 @@
+package com.mycompany.palindromecheckerapp;
+
+public class UC4_TwoPointer {
+
+    public static void main(String[] args) {
+
+        String input = "radar";
+        int left = 0;
+        int right = input.length() - 1;
+        boolean isPalindrome = true;
+
+        while (left < right) {
+            if (input.charAt(left) != input.charAt(right)) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
