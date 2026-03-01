@@ -1,0 +1,42 @@
+package com.mycompany.palindromecheckerapp;
+
+import java.util.Scanner;
+
+public class UC13_MenuDriven {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("1. Check Palindrome");
+        System.out.println("2. Exit");
+        System.out.print("Enter choice: ");
+
+        int choice = sc.nextInt();
+        sc.nextLine();
+
+        switch (choice) {
+
+            case 1:
+                System.out.println("Enter string:");
+                String input = sc.nextLine();
+
+                String reversed = new StringBuilder(input).reverse().toString();
+
+                if (input.equalsIgnoreCase(reversed))
+                    System.out.println("Palindrome");
+                else
+                    System.out.println("Not Palindrome");
+                break;
+
+            case 2:
+                System.out.println("Exiting...");
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
